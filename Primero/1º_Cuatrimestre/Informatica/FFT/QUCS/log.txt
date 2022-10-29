@@ -1,0 +1,32 @@
+Salida:
+-------
+
+Iniciando una nueva simulación en lu. 06. dic. 2021 en 15:15:41:365
+
+creando netlist... done.
+Starting C:/Users/mario/OneDrive/Escritorio/qucs-0.0.19-win32-mingw482-asco-freehdl-adms/bin/qucsator.exe
+
+project location: 
+modules to load: 0
+factorycreate.size() is 0
+factorycreate has registered:
+parsing netlist...
+checking netlist...
+netlist content
+      1 MOSFET instances
+      1 IProbe instances
+      1 DC instances
+      1 VProbe instances
+      1 R instances
+      1 Vdc instances
+creating netlist...
+
+Finalizada simulación en lu. 06. dic. 2021 en 15:15:41:415
+Listo.
+
+
+
+Errors and Warnings:
+--------------------
+
+

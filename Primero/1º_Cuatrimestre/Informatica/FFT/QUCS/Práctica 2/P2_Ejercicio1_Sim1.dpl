@@ -1,0 +1,31 @@
+<Qucs Schematic 0.0.19>
+<Properties>
+  <View=0,0,914,800,1,0,0>
+  <Grid=10,10,0>
+  <DataSet=P2_Ejercicio1_Sim1.dat>
+  <DataDisplay=P2_Ejercicio1_Sim1.sch>
+  <OpenDisplay=1>
+  <Script=P2_Ejercicio1_Sim1.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Título>
+  <FrameText1=Dibujado por:>
+  <FrameText2=Fecha:>
+  <FrameText3=Revisión:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Tab 390 441 484 171 3 #c0c0c0 1 00 1 0 1 1 1 0 1 1 1 0 1 1 315 0 225 "" "" "">
+	<"I1.I" #0000ff 0 3 1 0 0>
+	<"I2.I" #0000ff 0 3 1 0 0>
+	<"V1.V" #0000ff 0 3 1 0 0>
+	<"V2.V" #0000ff 0 3 1 0 0>
+  </Tab>
+</Diagrams>
+<Paintings>
+</Paintings>
