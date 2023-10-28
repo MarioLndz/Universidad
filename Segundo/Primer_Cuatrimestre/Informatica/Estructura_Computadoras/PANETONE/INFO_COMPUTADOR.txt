@@ -1,0 +1,80 @@
+// PEDRO HAIMAR CASTILLO GARCÍA
+// 2ºDGIIM
+
+// INFORMACIÓN DE MI COMPUTADOR //
+
+/ Comando lscpu
+
+Arquitectura:                        x86_64
+modo(s) de operación de las CPUs:    32-bit, 64-bit
+Orden de los bytes:                  Little Endian
+Address sizes:                       39 bits physical, 48 bits virtual
+CPU(s):                              8
+Lista de la(s) CPU(s) en línea:      0-7
+Hilo(s) de procesamiento por núcleo: 2
+Núcleo(s) por «socket»:              4
+«Socket(s)»                          1
+Modo(s) NUMA:                        1
+ID de fabricante:                    GenuineIntel
+Familia de CPU:                      6
+Modelo:                              126
+Nombre del modelo:                   Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+Revisión:                            5
+CPU MHz:                             1077.033
+CPU MHz máx.:                        3600,0000
+CPU MHz mín.:                        400,0000
+BogoMIPS:                            2380.80
+Virtualización:                      VT-x
+Caché L1d:                           192 KiB
+Caché L1i:                           128 KiB
+Caché L2:                            2 MiB
+Caché L3:                            6 MiB
+CPU(s) del nodo NUMA 0:              0-7
+Vulnerability Itlb multihit:         KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                  Not affected
+Vulnerability Mds:                   Not affected
+Vulnerability Meltdown:              Not affected
+Vulnerability Spec store bypass:     Mitigation; Speculative Store Bypass disabl
+                                     ed via prctl and seccomp
+Vulnerability Spectre v1:            Mitigation; usercopy/swapgs barriers and __
+                                     user pointer sanitization
+Vulnerability Spectre v2:            Mitigation; Enhanced IBRS, IBPB conditional
+                                     , RSB filling
+Vulnerability Srbds:                 Not affected
+Vulnerability Tsx async abort:       Not affected
+Indicadores:                         fpu vme de pse tsc msr pae mce cx8 apic sep
+                                      mtrr pge mca cmov pat pse36 clflush dts ac
+                                     pi mmx fxsr sse sse2 ss ht tm pbe syscall n
+                                     x pdpe1gb rdtscp lm constant_tsc art arch_p
+                                     erfmon pebs bts rep_good nopl xtopology non
+                                     stop_tsc cpuid aperfmperf tsc_known_freq pn
+                                     i pclmulqdq dtes64 monitor ds_cpl vmx est t
+                                     m2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_
+                                     1 sse4_2 x2apic movbe popcnt tsc_deadline_t
+                                     imer aes xsave avx f16c rdrand lahf_lm abm 
+                                     3dnowprefetch cpuid_fault epb invpcid_singl
+                                     e ssbd ibrs ibpb stibp ibrs_enhanced tpr_sh
+                                     adow vnmi flexpriority ept vpid ept_ad fsgs
+                                     base tsc_adjust sgx bmi1 avx2 smep bmi2 erm
+                                     s invpcid avx512f avx512dq rdseed adx smap 
+                                     avx512ifma clflushopt intel_pt avx512cd sha
+                                     _ni avx512bw avx512vl xsaveopt xsavec xgetb
+                                     v1 xsaves split_lock_detect dtherm ida arat
+                                      pln pts hwp hwp_notify hwp_act_window hwp_
+                                     epp hwp_pkg_req avx512vbmi umip pku ospke a
+                                     vx512_vbmi2 gfni vaes vpclmulqdq avx512_vnn
+                                     i avx512_bitalg avx512_vpopcntdq rdpid sgx_
+                                     lc fsrm md_clear flush_l1d arch_capabilitie
+                                     s
+
+
+
+/ Comando make info
+
+line size = 64B
+cache size = 48K/32K/512K/6144K/
+cache level = 1/1/2/3/
+cache type = Data/Instruction/Unified/Unified/
+
+// PEDRO HAIMAR CASTILLO GARCÍA
+// 2ºDGIIM

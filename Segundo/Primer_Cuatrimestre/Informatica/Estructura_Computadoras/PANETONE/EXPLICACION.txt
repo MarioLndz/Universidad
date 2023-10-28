@@ -1,0 +1,124 @@
+// PEDRO HAIMAR CASTILLO GARCÍA
+// 2ºDGIIM
+
+
+
+// LINE.CC //
+
+El objetivo de este programa es averiguar cuál es el tamaño de línea de mi computador
+usando la gráfica generada por el makefile. Esta gráfica representa los tiempos
+que ha tardado mi computador en realizar una serie de operaciones sencillas con
+distintos tamaños de línea.
+
+/ Descripción del programa
+
+Empezamos declarando las constantes:
+
+const unsigned MAXLINE = 1024; // maximun line size to test
+const unsigned GAP = 12;       // gap for cout columns
+const unsigned REP = 100;      // number of repetitions of every test
+
+MAXLINE es el tamaño de línea máximo que vamos a probar, GAP es simplemente para
+imprimir por pantalla los tiempos y REP es el número de veces que vamos a realizar
+la operación sencilla de la que hablábamos antes.
+
+Nada más empezar el main tenemos una parte que imprime en pantalla y luego empieza
+nuestro bucle. El bucle empieza con el tamaño de línea 1, se hace mientras el tamaño
+de línea no exceda MAXLINE y se va aumentando multiplicando por 2. Para cada tamaño
+de línea declaramos un vecto (score) que me va a guardar los tiempos de ejecución de 
+las operaciones sencillas. El siguiente bucle simplemente es un bucle que se realiz
+siempre 100 veces (REP veces) y que en cada iteración guarda en su respectiva
+posición del vector score el tiempo que se ha tardado en realizar nuestra operación
+simple. La operación simple será  un bucle que hace "bytes [i ] ^= 1;", empieza en i=0,
+se ejecuta mientras i sea menor que el tamaño del vector bytes y tenemos que i
+va aumentando sumando el tamaño de línea que estamos testeando en ese momento.
+Al principio de cada iteración de este segundo bucle se declara un vector llamado
+bytes que va a tener un tamaño enorme para asegurarnos que siempre exceda el
+tamaño de línea que estamos probando. Una vez tenemos el vector score con 100 datos
+(cada dato es el tiempo que se ha tardado en realizar la operación simple) usamos
+la función "std::nth_element" para dejar en el medio del vector la mediana de todos
+los datos del vector, es decir, para dejar en el medio el valor más representativo
+de cuánto tarda nuestro computador en ejecutar la operación simple con el tamaño de
+línea que estamos probando. Después de esto, simplemente se imprime en pantalla ese 
+valor más representativo. El primer bucle hará esto con todos los tamaños de
+línea que vamos a probar. La gráfica es generada por el makefile.
+
+/ Descripción de la gráfica
+
+Vemos cómo con tamaños de línea pequeños se tarda mucho tiempo. Esto se debe a que
+se realizan más iteraciones del bucle de la operación simple. Se observa que en 
+el tamaño de línea 64B mi gráfica hace un máximo para luego decrecer en tiempo. 
+De esto puedo deducir que el tamaño de línea de mi computador es 64B. Con tamaños 
+más grandes que 64B el tiempo es menor porque se recorre antes el vector de bytes.
+
+/ Comprobación del tamaño de línea
+
+Vemos gracias al comando make info que efectivamente el tamaño de línea de mi
+computador es 64B.
+
+
+
+
+// SIZE.CC //
+
+El objetivo de este programa es averiguar cuál es el tamaño de las memorias caché
+de mi computador usando la gráfica generada por el makefile. Esta gráfica representa 
+los tiempos que ha tardado mi computador en realizar una serie de operaciones sencillas con
+distintos tamaños de línea.
+
+/ Descripción del programa
+
+Tenemos las mismas constantes que en el programa anterior y 2 nuevas y una modificada:
+
+const unsigned MINSIZE = 1 << 10; // minimun line size to test:  1KB
+const unsigned MAXSIZE = 1 << 26; // maximun line size to test: 32MB
+const unsigned STEPS = 1e6;       // steps
+
+Ahora el tamaño de línea mínimo viene dado por MINSIZE y el máximo por MAXSIZE.
+STEPS nos dice el número de veces que vamos a realizar nuestra operación simple.
+
+Este programa es bastante parecido a line.cc. En este programa el primer bucle va probando
+distintos tamaños de línea, empezando por MINSIZE, acabando en MAXSIZE y multiplicándose
+por 2 cada vez. Como hicimos antes declaramos el vector score para almacenar los tiempos.
+Iniciamos el segundo bucle que va a realizar 100 iteraciones como antes. En cada iteración
+se declara el vector bytes que esta vez tendrá el mismo tamaño que el tamaño de línea que
+estamos testeando en ese momento. Los tiempos que tarda el programa y dónde se almacenan
+(vector score) siguen el mismo funcionamiento que en el programa anterior. En este programa
+hemos cambiado la operación simple que realizamos. La operación simple es
+"bytes[(i*64) & (size-1)]++;" y la vamos a hacer un total de STEPS veces. Hay que destacar
+que hemos puesto "i*64" porque ya sabemos que el tamaño de línea de nuestro computador
+es de 64B y le hemos hecho una operación "&" con el tamaño del vector menos uno para evitar
+acceder a posiciones inexistentes del vector, es decir, para evitar acceder a posiciones
+que no hemos reservado para el vector. Como he dicho antes, la dinámica de almacenar el
+tiempo que se ha tardado en posiciones del vector score es igual que en el otro programa.
+De igual manera, para cada tamaño de línea se calcula el valor más representativo del
+tiempo tardado en realizar las operaciones y después este tiempo se imprime por pantalla.
+La gráfica es generada por el makefile.
+
+/ Descripción de la gráfica
+
+Podemos ver en la gráfica cuántos niveles de caché tiene mi procesador y el tamaño de
+cada uno. Para ello, tenemos que fijarnos en los puntos de la gráfica que crecen
+muy rápido. Por como hemos diseñado el programa size.cc, en la gráfica vemos como
+hay ciertos puntos en los que la gráfica es constante y otros en los que crece muy rapido.
+Esto es porque cuando la gráfica crece se cambia de nivel de caché. El nivel de caché L1
+es el más rápido y en la gráfica es el que tarda menos tiempo. Cuándo crece el tiempo
+(es decir, que se tarda más tiempo en realizar las operaciones) significa que hemos
+pasado a usar la L2 (que es más lenta que la L1). Igual con la L3 y la memoria principal. 
+Nos ayudamos del comando lscpu y vemos el tamaño de nuestros niveles de caché:
+
+Caché L1d:                           192 KiB
+Caché L1i:                           128 KiB
+Caché L2:                            2 MiB
+Caché L3:                            6 MiB
+
+
+/ Comprobación del tamaño de caché
+
+Vemos como tienen sentido los datos obtenido con el comando lscpu en la gráfica
+obtenida por el programa size.cc
+
+
+// PEDRO HAIMAR CASTILLO GARCÍA
+// 2ºDGIIM
+

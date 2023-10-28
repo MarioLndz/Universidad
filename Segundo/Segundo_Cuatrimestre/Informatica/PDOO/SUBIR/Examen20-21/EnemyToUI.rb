@@ -1,0 +1,37 @@
+#require_relative 'CombatResult'
+#require_relative 'EnemyStarShip'
+#require_relative 'SpaceStation'
+#require_relative 'GameStateController'
+#require_relative 'Dice'
+#require_relative 'GameUniverseToUI'
+#require_relative 'CardDealer'
+
+
+module Deepspace
+
+# 30.3.17 - Translation from Java
+# @author Profe
+  
+class EnemyToUI 
+  
+  attr_reader :name, :ammoPower, :shieldPower, :loot, :damage
+    
+  def initialize(enemy) 
+    @name=enemy.name
+    @ammoPower=enemy.ammoPower
+    @shieldPower=enemy.shieldPower
+    @loot=enemy.loot.getUIversion()
+    @damage = enemy.damage.getUIversion()
+  end
+
+  def to_s
+    return "Name: #{@name}, " + \
+        "Ammo Power: #{@ammoPower}, " + \
+        "Shield Power: #{@shieldPower}\n" + \
+        "\tLoot..: #{@loot}\n" + \
+        "\tDamage: #{@damage}"
+  end
+    
+end # class
+  
+end # module
