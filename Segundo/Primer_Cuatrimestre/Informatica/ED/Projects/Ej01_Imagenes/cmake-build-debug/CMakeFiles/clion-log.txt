@@ -1,0 +1,5 @@
+/home/mario/clion-2022.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/mario/clion-2022.2.3/bin/ninja/linux/ninja -G Ninja -S /home/mario/Escritorio/ED/Projects/Ej01_Imagenes -B /home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug

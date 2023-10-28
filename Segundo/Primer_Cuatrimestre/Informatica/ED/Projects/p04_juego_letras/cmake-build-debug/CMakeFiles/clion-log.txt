@@ -1,0 +1,5 @@
+/home/mario/clion-2022.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/mario/Escritorio/ED/Projects/p04_juego_letras -B /home/mario/Escritorio/ED/Projects/p04_juego_letras/cmake-build-debug
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mario/Escritorio/ED/Projects/p04_juego_letras/cmake-build-debug

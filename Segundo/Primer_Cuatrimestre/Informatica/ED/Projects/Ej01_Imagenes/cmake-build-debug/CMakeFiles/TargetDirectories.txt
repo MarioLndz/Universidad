@@ -1,0 +1,11 @@
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/image.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/negativo.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/subimagen.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/zoom.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/icono.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/contraste.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/barajar.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/analisis_eficiencia.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mario/Escritorio/ED/Projects/Ej01_Imagenes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
